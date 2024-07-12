@@ -26,28 +26,35 @@
 
 // Final GPA:          3.35
 
+// Define the student's name
 string studentName = "Sophia Johnson";
+
+// Define the names of the courses
 string course1Name = "English 101";
 string course2Name = "Algebra 101";
 string course3Name = "Biology 101";
 string course4Name = "Computer Science I";
 string course5Name = "Psychology 101";
 
+// Define the credit hours for each course
 int course1Credit = 3;
 int course2Credit = 3;
 int course3Credit = 4;
 int course4Credit = 4;
 int course5Credit = 3;
 
+// Define the numerical values for letter grades
 int gradeA = 4;
 int gradeB = 3;
 
-int course1Grade = gradeA;
-int course2Grade = gradeB;
-int course3Grade = gradeB;
-int course4Grade = gradeB;
-int course5Grade = gradeA;
+// Define the grades for each course
+int course1Grade = gradeA;  // English 101 grade
+int course2Grade = gradeB;  // Algebra 101 grade
+int course3Grade = gradeB;  // Biology 101 grade
+int course4Grade = gradeB;  // Computer Science I grade
+int course5Grade = gradeA;  // Psychology 101 grade
 
+// Calculate the total number of credit hours
 int totalCreditHours = 0;
 totalCreditHours += course1Credit;
 totalCreditHours += course2Credit;
@@ -55,6 +62,7 @@ totalCreditHours += course3Credit;
 totalCreditHours += course4Credit;
 totalCreditHours += course5Credit;
 
+// Calculate the total grade points
 int totalGradePoints = 0;
 totalGradePoints += course1Credit * course1Grade;
 totalGradePoints += course2Credit * course2Grade;
@@ -62,22 +70,28 @@ totalGradePoints += course3Credit * course3Grade;
 totalGradePoints += course4Credit * course4Grade;
 totalGradePoints += course5Credit * course5Grade;
 
-decimal gradePointAverage = (decimal) totalGradePoints/totalCreditHours;
+// Calculate the grade point average (GPA)
+decimal gradePointAverage = (decimal)totalGradePoints / totalCreditHours;
 
-int leadingDigit = (int) gradePointAverage;
-int firstDigit = (int) (gradePointAverage * 10 ) % 10;
-int secondDigit = (int) (gradePointAverage * 100 ) % 10;
+// Extract the individual digits of the GPA for formatting
+int leadingDigit = (int)gradePointAverage;
+int firstDigit = (int)(gradePointAverage * 10) % 10;
+int secondDigit = (int)(gradePointAverage * 100) % 10;
 
+// Print the student's name
 Console.WriteLine($"Student: {studentName}\n");
-Console.WriteLine("Course\t\t\t\tGrade\tCredit Hours");
 
+// Print the course information: course name, grade, and credit hours
+Console.WriteLine("Course\t\t\t\tGrade\tCredit Hours");
 Console.WriteLine($"{course1Name}\t\t\t{course1Grade}\t\t{course1Credit}");
 Console.WriteLine($"{course2Name}\t\t\t{course2Grade}\t\t{course2Credit}");
 Console.WriteLine($"{course3Name}\t\t\t{course3Grade}\t\t{course3Credit}");
 Console.WriteLine($"{course4Name}\t{course4Grade}\t\t{course4Credit}");
 Console.WriteLine($"{course5Name}\t\t{course5Grade}\t\t{course5Credit}");
 
+// Print the final GPA
 Console.WriteLine($"\nFinal GPA:\t\t\t {leadingDigit}.{firstDigit}{secondDigit}");
+
 
 
 

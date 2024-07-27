@@ -1,0 +1,1 @@
+// Read the values of the properties entree and the drink of 

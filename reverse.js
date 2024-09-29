@@ -24,6 +24,18 @@ function reverse3(str) {
   return backward.join('');
 }
 
+// Solution 4
+const reverse = (str) => {
+  let reverse = '';
+  const backward = str.length - 1;
+
+  for(let i = backward; i >= 0; i--) {
+      reverse += str[i];
+  }
+
+  return reverse;
+}
+
 console.log(reverse3('joseph'));
 
 // console.log(reverse1('Joseph'));
